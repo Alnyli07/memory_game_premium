@@ -29,6 +29,8 @@ function createBoard(width, row){
 	    style.height = itemSize;
 	    style.marginLeft = 5;
 	    style.marginTop = 5;
+	    if( (i / row ) >= (row-1))
+	      style.marginBottom = 5;
 	    return style;
 	  });
 	}

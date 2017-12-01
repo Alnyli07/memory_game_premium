@@ -4,7 +4,9 @@
 const extend = require('js-base/core/extend');
 const PgGameBoardDesign = require('ui/ui_pgGameBoard');
 const Screen = require('sf-core/device/screen');
+const System = require('sf-core/device/system');
 
+const HEADER_HEIGHT = System.OS === "Android" ? 80 : 64;
 const PgGameBoard = extend(PgGameBoardDesign)(
   // Constructor
   function(_super) {
@@ -33,8 +35,15 @@ function onShow(superOnShow) {
  */
 function onLoad(superOnLoad) {
   superOnLoad();
-  this.gameBoard.createBoard(Screen.width - 22, 3);
-  console.log("Screen:" + Screen.width + " .height "+ Screen.height);
+  var boardWidth = Screen.width - 22;
+  this.gameBoard.createBoard(boardWidth, 3);
+  this.headerContainer.dispatch({
+    type: "updateUserStyle",
+    userStyle: {
+      height: Screen.height - Screen.width -HEADER_HEIGHT
+    }
+  });
+  console.log("Screen:" + Screen.width + " .height "+ Screen.height + "System:"+(Screen.height - Screen.width -HEADER_HEIGHT));
 }
 
 module && (module.exports = PgGameBoard);

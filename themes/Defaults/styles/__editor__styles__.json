@@ -53,14 +53,14 @@
 	},
 	"#header_container_head_leader": {
 		"left": null,
-		"top": null,
-		"height": 90,
+		"top": 0,
+		"height": null,
 		"borderRadius": 10,
 		"flexProps": {
 			"flexDirection": "ROW",
 			"positionType": "ABSOLUTE",
 			"flexGrow": 0.8,
-			"alignSelf": "CENTER"
+			"alignSelf": "STRETCH"
 		},
 		"flex": {
 			"flexDirection": 2,
@@ -68,7 +68,8 @@
 		},
 		"backgroundColor": "rgba( 3, 169, 244, 1 )",
 		"right": 5,
-		"width": 150
+		"width": 150,
+		"bottom": 0
 	},
 	"#header_container_head_icon": {
 		"width": null,
@@ -81,15 +82,15 @@
 		"width": null,
 		"flexProps": {
 			"flexDirection": "ROW",
-			"flexGrow": 1
+			"flexGrow": 1,
+			"alignItems": "STRETCH",
+			"justifyContent": "FLEX_END"
 		},
 		"marginLeft": 5,
 		"marginRight": 5,
 		"height": null
 	},
 	"#gameboard": {
-		"left": 0,
-		"top": 0,
 		"width": null,
 		"height": 300,
 		"flexProps": {
@@ -122,7 +123,7 @@
 		"height": null,
 		"flexProps": {
 			"flexGrow": 1,
-			"alignSelf": "STRETCH"
+			"alignSelf": "CENTER"
 		}
 	},
 	"#header_container_flbuttons_timer": {
