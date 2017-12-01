@@ -29,6 +29,32 @@ themeConfig.themes.forEach(function(name) {
 Application.theme = createThemeContextBound(themeSources);
 
 // Define routes and go to initial page of application
+
+
+const commands = require("@smartface/styler/lib/commandsManager");
+const merge = require("@smartface/styler/lib/utils/merge");
+const Screen = require('sf-core/device/screen');
+var orientationState = "ended";
+commands.addRuntimeCommandFactory(function(type) {
+        switch (type) {
+                case '+page':
+                        return function pageCommand(opts) {
+                                opts = merge(opts);
+                                var isOK = (function(Screen) { return eval(opts.args); }({ width: Screen.width, height: Screen.height }));
+                                return isOK ? opts.value : {};
+                        };
+                case '+orientationChange':
+                        return function pageCommand(opts) {
+                                opts = merge(opts);
+                                var isOK = (function(Screen, orientation) {
+                                        return eval(opts.args);
+                                }({ width: Screen.width, height: Screen.height }, orientationState));
+                                return isOK ? opts.value : {};
+                        };
+        }
+});
+
 Router.add("pgLogin", require("./pages/pgLogin"));
-//Router.add("page2", require("./pages/page2"));
+Router.add("pgGameBoard", require("./pages/pgGameBoard"));
+
 Router.go("pgLogin");

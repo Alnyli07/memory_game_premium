@@ -13,56 +13,175 @@
 		"backgroundColor": "rgba( 255, 255, 255, 0 )"
 	},
 	".label": {
-		"backgroundColor": "rgba( 255, 255, 255, 0 )"
+		"backgroundColor": "rgba( 255, 255, 255, 0 )",
+		"textColor": "rgba( 33, 33, 33, 1 )"
 	},
-	"pg_game_board": {
-		"backgroundColor": "rgba( 207, 236, 244, 1 )",
+	"#pg_game_board": {
 		"+Device:Device.orientation === \"landscape\"": {
 			"flexProps": {
-				"flexDirection": "ROW"
+				"flexDirection": "ROW_REVERSE"
 			}
-		}
-	},
-	"header_container": {
-		"width": null,
-		"flexProps": {
-			"flexGrow": 1
 		},
-		"height": null
+		"paddingLeft": 10,
+		"paddingRight": 10,
+		"paddingBottom": 10,
+		"paddingTop": 10
 	},
-	"header_container_head": {
+	"#header_container": {
 		"width": null,
-		"height": null,
 		"flexProps": {
-			"flexGrow": null,
+			"flexGrow": 0.95
+		},
+		"height": null,
+		"+Device:Device.orientation === \"landscape\"": {
+			"flexProps": {
+				"justifyContent": "SPACE_BETWEEN"
+			}
+		},
+		"paddingLeft": 10,
+		"paddingRight": 10
+	},
+	"#header_container_head": {
+		"width": null,
+		"height": 90,
+		"flexProps": {
 			"flexDirection": "ROW"
 		},
-		"minHeight": 90,
 		"marginTop": 25
 	},
-	"header_container_head_leader": {
-		"left": 0,
-		"top": 0,
+	"#header_container_head_leader": {
+		"left": null,
+		"top": null,
 		"height": 90,
-		"borderRadius": 5,
+		"borderRadius": 10,
 		"flexProps": {
 			"flexDirection": "ROW",
-			"positionType": "RELATIVE",
-			"flexGrow": 1
+			"positionType": "ABSOLUTE",
+			"flexGrow": 0.8,
+			"alignSelf": "CENTER"
 		},
 		"flex": {
 			"flexDirection": 2,
 			"positionType": 0
 		},
-		"backgroundColor": "rgba( 184, 231, 244, 1 )",
-		"marginRight": 5,
-		"width": null
+		"backgroundColor": "rgba( 3, 169, 244, 1 )",
+		"right": 5,
+		"width": 150
 	},
-	"header_container_head_icon": {
+	"#header_container_head_icon": {
 		"width": null,
 		"height": null,
 		"flexProps": {
 			"flexGrow": 1
 		}
+	},
+	"#header_container_flbuttons": {
+		"width": null,
+		"height": null,
+		"flexProps": {
+			"flexDirection": "ROW",
+			"flexGrow": 1
+		},
+		"maxHeight": 100
+	},
+	"#gameboard": {
+		"left": 0,
+		"top": 0,
+		"width": null,
+		"height": null,
+		"flexProps": {
+			"positionType": "RELATIVE",
+			"flexGrow": 1
+		},
+		"flex": {
+			"positionType": 0
+		},
+		"borderWidth": 1,
+		"borderColor": "rgba( 189, 189, 189, 1 )",
+		"marginLeft": 5,
+		"marginRight": 5,
+		"marginBottom": 5,
+		"marginTop": 5,
+		"+Device:Device.orientation === \"landscape\"": {
+			"marginTop": 20
+		}
+	},
+	"#header_container_flbuttons_flinfo": {
+		"width": null,
+		"height": null,
+		"flexProps": {
+			"flexGrow": 0.7,
+			"alignItems": "CENTER",
+			"justifyContent": "CENTER"
+		}
+	},
+	"#header_container_flbuttons_flbutton": {
+		"width": 80,
+		"height": 80,
+		"flexProps": {}
+	},
+	"#header_container_flbuttons_timer": {
+		"flexProps": {
+			"alignItems": "CENTER",
+			"justifyContent": "FLEX_START",
+			"flexGrow": 0.7,
+			"flexDirection": "ROW"
+		},
+		"marginRight": 5,
+		"paddingTop": 10,
+		"paddingLeft": 10
+	},
+	"": {
+		"flexProps": {},
+		"left": 40,
+		"top": 243.63636363636363,
+		"width": 106.79012345679011,
+		"height": 78.39506172839506
+	},
+	"#header_container_flbuttons_timer_label": {
+		"width": null,
+		"flexProps": {
+			"alignSelf": "AUTO",
+			"flexGrow": 1
+		},
+		"height": 50,
+		"textAlignment": "MIDRIGHT",
+		"font": {
+			"size": 20
+		},
+		"marginRight": 5
+	},
+	"#header_container_flbuttons_flinfo_label": {
+		"height": 40,
+		"textAlignment": "MIDLEFT",
+		"width": null,
+		"flexProps": {
+			"alignSelf": "STRETCH"
+		},
+		"marginLeft": 5,
+		"font": {
+			"size": 18
+		}
+	},
+	".board_item_passive": {
+		"backgroundColor": "rgba( 2, 136, 209, 1 )"
+	},
+	".page": {
+		"backgroundColor": "rgba( 179, 229, 252, 1 )"
+	},
+	".board_item_active": {
+		"backgroundColor": "rgba( 139, 195, 74, 1 )"
+	},
+	".board_item_wrong": {
+		"backgroundColor": "rgba( 33, 33, 33, 1 )"
+	},
+	".board_item_right": {
+		"backgroundColor": "rgba( 139, 195, 74, 1 )"
+	},
+	".board_item_empty": {
+		"backgroundColor": "rgba( 117, 117, 117, 1 )"
+	},
+	".button": {
+		"backgroundColor": "rgba( 3, 169, 244, 1 )"
 	}
 }

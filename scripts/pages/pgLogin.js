@@ -3,6 +3,7 @@
 */
 const extend = require('js-base/core/extend');
 const LoginPageFB001Design = require('ui/ui_pgLogin');
+const Router = require("sf-core/ui/router");
 
 const LoginPageFB001 = extend(LoginPageFB001Design)(
   // Constructor
@@ -13,6 +14,7 @@ const LoginPageFB001 = extend(LoginPageFB001Design)(
     this.onShow = onShow.bind(this, this.onShow.bind(this));
     // overrides super.onLoad method
     this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+    this.loginbutton.onPress = loginPress.bind(this);
 
   });
 
@@ -33,6 +35,10 @@ function onShow(superOnShow) {
  */
 function onLoad(superOnLoad) {
   superOnLoad();
+}
+
+function loginPress(){
+  Router.go("pgGameBoard");
 }
 
 module && (module.exports = LoginPageFB001);

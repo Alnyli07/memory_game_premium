@@ -7,7 +7,7 @@
 			"userProps": {
 				"orientation": "AUTO"
 			},
-			"className": "pg_game_board",
+			"className": ".page #pg_game_board",
 			"version": "6.5.3-rc.16",
 			"props": {
 				"name": "pgGameBoard",
@@ -25,7 +25,7 @@
 			"type": "StatusBar",
 			"id": "897e-a694-4be3-5435",
 			"userProps": {},
-			"className": "",
+			"className": ".statusBar",
 			"props": {
 				"name": "statusBar",
 				"children": [],
@@ -40,7 +40,7 @@
 				"title": "Level 1",
 				"visible": false
 			},
-			"className": "",
+			"className": ".headerBar",
 			"props": {
 				"name": "headerBar",
 				"title": "Level 1",
@@ -58,20 +58,8 @@
 				"type": "gameBoard",
 				"id": "288d-6425-309a-12ff"
 			},
-			"userProps": {
-				"left": 0,
-				"top": 0,
-				"width": null,
-				"height": null,
-				"flexProps": {
-					"positionType": "RELATIVE",
-					"flexGrow": 1
-				},
-				"flex": {
-					"positionType": 0
-				}
-			},
-			"className": ".flexLayout game_board",
+			"userProps": {},
+			"className": ".flexLayout #gameboard",
 			"props": {
 				"name": "gameBoard",
 				"children": [],
@@ -82,12 +70,13 @@
 			"type": "FlexLayout",
 			"id": "14bd-53f9-9705-a1c5",
 			"userProps": {},
-			"className": ".flexLayout header_container",
+			"className": ".flexLayout #header_container",
 			"props": {
 				"name": "headerContainer",
 				"children": [
 					"43f6-b7aa-6bd8-0480",
-					"02f2-265b-3ded-dfe0"
+					"02f2-265b-3ded-dfe0",
+					"6ca2-1f58-9ccc-25fa"
 				],
 				"parent": "a4e7-a864-2d6f-0667"
 			}
@@ -120,11 +109,11 @@
 			"type": "FlexLayout",
 			"id": "43f6-b7aa-6bd8-0480",
 			"userProps": {},
-			"className": ".flexLayout header_container_head",
+			"className": ".flexLayout #header_container_head",
 			"props": {
 				"name": "head",
 				"children": [
-					"ff9f-8c12-0236-ad5a",
+					"d98c-5160-f536-fa26",
 					"fe9c-d27a-701b-2170"
 				],
 				"parent": "14bd-53f9-9705-a1c5"
@@ -140,7 +129,7 @@
 				"id": "bc21-0f02-e69a-5163"
 			},
 			"userProps": {},
-			"className": ".flexLayout header_container_head_leader",
+			"className": ".flexLayout #header_container_head_leader",
 			"props": {
 				"name": "leaderCorner",
 				"children": [],
@@ -148,17 +137,148 @@
 			}
 		},
 		{
-			"type": "ImageView",
-			"id": "ff9f-8c12-0236-ad5a",
-			"userProps": {
-				"image": "textIcon.png",
-				"imageFillType": "ASPECTFIT"
-			},
-			"className": ".imageView header_container_head_icon",
+			"type": "FlexLayout",
+			"id": "6ca2-1f58-9ccc-25fa",
+			"userProps": {},
+			"className": ".flexLayout #header_container_flbuttons",
 			"props": {
-				"name": "imageView1",
+				"name": "flButtons",
+				"children": [
+					"346c-e3c2-dc5c-81e8",
+					"6380-c5e7-492a-3823"
+				],
+				"parent": "14bd-53f9-9705-a1c5"
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "346c-e3c2-dc5c-81e8",
+			"userProps": {},
+			"className": ".flexLayout #header_container_flbuttons_flinfo",
+			"props": {
+				"name": "flInfo",
+				"children": [
+					"2cf3-bd5d-52e8-9138",
+					"65a0-2b14-88ed-11c4"
+				],
+				"parent": "6ca2-1f58-9ccc-25fa"
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "6380-c5e7-492a-3823",
+			"userProps": {},
+			"className": ".flexLayout #header_container_flbuttons_flinfo #header_container_flbuttons_timer",
+			"props": {
+				"name": "flTimer",
+				"children": [
+					"9bbf-c971-97e8-28b3",
+					"8ad9-920e-a7c6-88fe"
+				],
+				"parent": "6ca2-1f58-9ccc-25fa"
+			}
+		},
+		{
+			"type": "ImageView",
+			"id": "8ad9-920e-a7c6-88fe",
+			"userProps": {
+				"image": "timeroff.png",
+				"imageFillType": "ASPECTFIT",
+				"left": 0,
+				"top": 0,
+				"width": 50,
+				"height": 50,
+				"usePageVariable": true
+			},
+			"className": ".imageView #header_container_flbuttons_flbutton",
+			"props": {
+				"name": "timerIcon",
+				"usePageVariable": true,
 				"children": [],
+				"parent": "6380-c5e7-492a-3823"
+			}
+		},
+		{
+			"type": "Label",
+			"id": "9bbf-c971-97e8-28b3",
+			"userProps": {
+				"text": "3 S",
+				"usePageVariable": true
+			},
+			"className": ".label #header_container_flbuttons_timer_label",
+			"props": {
+				"name": "currentTime",
+				"text": "3 S",
+				"usePageVariable": true,
+				"children": [],
+				"parent": "6380-c5e7-492a-3823"
+			}
+		},
+		{
+			"type": "Label",
+			"id": "2cf3-bd5d-52e8-9138",
+			"hiddenComponent": false,
+			"userProps": {
+				"usePageVariable": true,
+				"text": "Score: 100"
+			},
+			"className": ".label #header_container_flbuttons_flinfo_label",
+			"props": {
+				"name": "currentScore",
+				"text": "Score: 100",
+				"usePageVariable": true,
+				"children": [],
+				"parent": "346c-e3c2-dc5c-81e8"
+			}
+		},
+		{
+			"type": "Label",
+			"id": "65a0-2b14-88ed-11c4",
+			"userProps": {
+				"usePageVariable": true,
+				"text": "Level : 2"
+			},
+			"className": ".label #header_container_flbuttons_flinfo_label",
+			"props": {
+				"name": "currentLevel",
+				"text": "Level : 2",
+				"usePageVariable": true,
+				"children": [],
+				"parent": "346c-e3c2-dc5c-81e8"
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "d98c-5160-f536-fa26",
+			"hiddenComponent": false,
+			"userProps": {
+				"maxWidth": 90,
+				"left": 0,
+				"top": 0
+			},
+			"className": ".flexLayout #header_container_flbuttons_flinfo",
+			"props": {
+				"name": "flButton",
+				"children": [
+					"cd83-ec7d-253f-5a45"
+				],
 				"parent": "43f6-b7aa-6bd8-0480"
+			}
+		},
+		{
+			"type": "ImageView",
+			"id": "cd83-ec7d-253f-5a45",
+			"userProps": {
+				"image": "play.png",
+				"imageFillType": "ASPECTFIT",
+				"usePageVariable": true
+			},
+			"className": ".imageView #header_container_flbuttons_flbutton",
+			"props": {
+				"name": "startBtn",
+				"usePageVariable": true,
+				"children": [],
+				"parent": "d98c-5160-f536-fa26"
 			}
 		}
 	]

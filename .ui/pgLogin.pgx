@@ -5,19 +5,18 @@
 			"id": "bd64-0489-48bb-d884",
 			"initialized": true,
 			"userProps": {
-				"backgroundColor": "rgba( 238, 238, 238, 1 )",
 				"paddingLeft": 20,
 				"paddingRight": 20,
 				"paddingBottom": null,
+				"layout": {},
+				"flex": {},
+				"font": {},
+				"defaults": {},
 				"flexProps": {
 					"justifyContent": "SPACE_AROUND",
 					"alignContent": "STRETCH",
 					"alignItems": "STRETCH"
-				},
-				"layout": {},
-				"flex": {},
-				"font": {},
-				"defaults": {}
+				}
 			},
 			"className": ".page",
 			"version": "6.4.5-rc.1",
@@ -28,7 +27,6 @@
 					"7c02-6a1f-8e2f-6810",
 					"0e60-30e3-be85-5ffc",
 					"b125-692d-41d4-e2e0",
-					"0e50-82d9-22a7-5b96",
 					"4899-aee3-163e-8de1",
 					"8a92-edd5-b256-9f63",
 					"5576-94aa-ae54-0104"
@@ -199,7 +197,7 @@
 			"userProps": {
 				"width": null,
 				"height": 40,
-				"text": "annamiracle@template.com",
+				"text": "alnyli07",
 				"backgroundColor": "rgba( 255, 255, 255, 0 )",
 				"borderColor": "rgba( 197, 197, 197, 1 )",
 				"textColor": "rgba( 63, 63, 63, 1 )",
@@ -210,7 +208,7 @@
 			"className": ".textBox",
 			"props": {
 				"name": "userNameInput",
-				"text": "annamiracle@template.com",
+				"text": "alnyli07",
 				"children": [],
 				"parent": "b125-692d-41d4-e2e0"
 			}
@@ -239,102 +237,6 @@
 		},
 		{
 			"type": "FlexLayout",
-			"id": "0e50-82d9-22a7-5b96",
-			"userProps": {
-				"backgroundColor": "rgba( 255, 255, 255, 0 )",
-				"width": null,
-				"height": null,
-				"bottom": null,
-				"top": null,
-				"flexProps": {
-					"flexGrow": 1.1,
-					"bottom": 30
-				}
-			},
-			"className": ".flexLayout",
-			"props": {
-				"name": "password",
-				"children": [
-					"186a-f0c1-a608-8ca2",
-					"eb13-eb47-d7cc-e73b",
-					"b303-864e-9067-2861",
-					"7ff0-30ae-1e61-d28b"
-				],
-				"parent": "bd64-0489-48bb-d884"
-			}
-		},
-		{
-			"type": "Label",
-			"id": "186a-f0c1-a608-8ca2",
-			"userProps": {
-				"height": 21,
-				"width": null,
-				"backgroundColor": "rgba( 255, 255, 255, 0 )",
-				"textAlignment": "MIDLEFT",
-				"textColor": "rgba( 160, 160, 160, 1 )",
-				"text": "PASSWORD",
-				"font": {
-					"size": 16,
-					"family": "Nunito"
-				}
-			},
-			"className": ".label",
-			"props": {
-				"name": "passwordLbl",
-				"text": "PASSWORD",
-				"children": [],
-				"parent": "0e50-82d9-22a7-5b96"
-			}
-		},
-		{
-			"type": "TextBox",
-			"id": "eb13-eb47-d7cc-e73b",
-			"userProps": {
-				"width": null,
-				"height": 40,
-				"text": "12345",
-				"backgroundColor": "rgba( 255, 255, 255, 0 )",
-				"borderColor": "rgba( 197, 197, 197, 1 )",
-				"textColor": "rgba( 63, 63, 63, 1 )",
-				"top": null,
-				"isPassword": true,
-				"font": {
-					"family": "Nunito"
-				}
-			},
-			"className": ".textBox",
-			"props": {
-				"isPassword": true,
-				"name": "passwordInput",
-				"text": "12345",
-				"children": [],
-				"parent": "0e50-82d9-22a7-5b96"
-			}
-		},
-		{
-			"type": "FlexLayout",
-			"id": "b303-864e-9067-2861",
-			"userProps": {
-				"borderWidth": 0,
-				"backgroundColor": "rgba( 226, 226, 226, 1 )",
-				"height": 1,
-				"width": null,
-				"borderColor": "rgba( 226, 226, 226, 1 )",
-				"layout": {},
-				"flex": {},
-				"font": {},
-				"flexProps": {},
-				"defaults": {}
-			},
-			"className": ".flexLayout",
-			"props": {
-				"name": "passwordLine",
-				"children": [],
-				"parent": "0e50-82d9-22a7-5b96"
-			}
-		},
-		{
-			"type": "FlexLayout",
 			"id": "5576-94aa-ae54-0104",
 			"userProps": {
 				"backgroundColor": "rgba( 255, 255, 255, 0 )",
@@ -355,41 +257,9 @@
 			}
 		},
 		{
-			"type": "Label",
-			"id": "7ff0-30ae-1e61-d28b",
-			"hiddenComponent": false,
-			"userProps": {
-				"top": -30,
-				"width": 120,
-				"backgroundColor": "rgba( 255, 255, 255, 0 )",
-				"height": 30,
-				"text": "Forgot Password",
-				"textColor": "rgba( 153, 153, 153, 1 )",
-				"textAlignment": "TOPLEFT",
-				"flexProps": {
-					"alignSelf": "FLEX_END"
-				},
-				"font": {
-					"size": 14,
-					"family": "Nunito"
-				},
-				"layout": {},
-				"flex": {},
-				"defaults": {}
-			},
-			"className": ".label",
-			"props": {
-				"name": "forgotYourPasswordLbl",
-				"text": "Forgot Password",
-				"children": [],
-				"parent": "0e50-82d9-22a7-5b96"
-			}
-		},
-		{
 			"type": "Button",
 			"id": "4899-aee3-163e-8de1",
 			"userProps": {
-				"backgroundColor": "rgba( 54, 134, 255, 1 )",
 				"width": null,
 				"text": "Login",
 				"height": null,
@@ -416,7 +286,6 @@
 			"type": "Button",
 			"id": "8a92-edd5-b256-9f63",
 			"userProps": {
-				"backgroundColor": "rgba( 54, 134, 255, 1 )",
 				"width": null,
 				"text": "Login with Facebook",
 				"height": null,
