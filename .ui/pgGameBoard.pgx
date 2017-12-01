@@ -1,0 +1,165 @@
+{
+	"components": [
+		{
+			"type": "Page",
+			"id": "a4e7-a864-2d6f-0667",
+			"initialized": true,
+			"userProps": {
+				"orientation": "AUTO"
+			},
+			"className": "pg_game_board",
+			"version": "6.5.3-rc.16",
+			"props": {
+				"name": "pgGameBoard",
+				"children": [
+					"897e-a694-4be3-5435",
+					"ea2e-c9eb-cc02-6d9d",
+					"14bd-53f9-9705-a1c5",
+					"1f0a-049b-6e98-7ce0"
+				],
+				"parent": null,
+				"orientation": "AUTO"
+			}
+		},
+		{
+			"type": "StatusBar",
+			"id": "897e-a694-4be3-5435",
+			"userProps": {},
+			"className": "",
+			"props": {
+				"name": "statusBar",
+				"children": [],
+				"parent": "a4e7-a864-2d6f-0667",
+				"isRemovable": false
+			}
+		},
+		{
+			"type": "HeaderBar",
+			"id": "ea2e-c9eb-cc02-6d9d",
+			"userProps": {
+				"title": "Level 1",
+				"visible": false
+			},
+			"className": "",
+			"props": {
+				"name": "headerBar",
+				"title": "Level 1",
+				"children": [],
+				"parent": "a4e7-a864-2d6f-0667",
+				"isRemovable": false
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "1f0a-049b-6e98-7ce0",
+			"hiddenComponent": false,
+			"source": {
+				"page": "__library__",
+				"type": "gameBoard",
+				"id": "288d-6425-309a-12ff"
+			},
+			"userProps": {
+				"left": 0,
+				"top": 0,
+				"width": null,
+				"height": null,
+				"flexProps": {
+					"positionType": "RELATIVE",
+					"flexGrow": 1
+				},
+				"flex": {
+					"positionType": 0
+				}
+			},
+			"className": ".flexLayout game_board",
+			"props": {
+				"name": "gameBoard",
+				"children": [],
+				"parent": "a4e7-a864-2d6f-0667"
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "14bd-53f9-9705-a1c5",
+			"userProps": {},
+			"className": ".flexLayout header_container",
+			"props": {
+				"name": "headerContainer",
+				"children": [
+					"43f6-b7aa-6bd8-0480",
+					"02f2-265b-3ded-dfe0"
+				],
+				"parent": "a4e7-a864-2d6f-0667"
+			}
+		},
+		{
+			"type": "Label",
+			"id": "02f2-265b-3ded-dfe0",
+			"userProps": {
+				"width": null,
+				"height": 100,
+				"text": "Click play button to start next level.",
+				"textAlignment": "MIDCENTER",
+				"multiline": true,
+				"font": {
+					"size": 20,
+					"family": "Nunito"
+				},
+				"left": 0,
+				"top": 0
+			},
+			"className": ".label",
+			"props": {
+				"name": "lblInfo",
+				"text": "Click play button to start next level.",
+				"children": [],
+				"parent": "14bd-53f9-9705-a1c5"
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "43f6-b7aa-6bd8-0480",
+			"userProps": {},
+			"className": ".flexLayout header_container_head",
+			"props": {
+				"name": "head",
+				"children": [
+					"ff9f-8c12-0236-ad5a",
+					"fe9c-d27a-701b-2170"
+				],
+				"parent": "14bd-53f9-9705-a1c5"
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "fe9c-d27a-701b-2170",
+			"hiddenComponent": false,
+			"source": {
+				"page": "__library__",
+				"type": "leaderCorner",
+				"id": "bc21-0f02-e69a-5163"
+			},
+			"userProps": {},
+			"className": ".flexLayout header_container_head_leader",
+			"props": {
+				"name": "leaderCorner",
+				"children": [],
+				"parent": "43f6-b7aa-6bd8-0480"
+			}
+		},
+		{
+			"type": "ImageView",
+			"id": "ff9f-8c12-0236-ad5a",
+			"userProps": {
+				"image": "textIcon.png",
+				"imageFillType": "ASPECTFIT"
+			},
+			"className": ".imageView header_container_head_icon",
+			"props": {
+				"name": "imageView1",
+				"children": [],
+				"parent": "43f6-b7aa-6bd8-0480"
+			}
+		}
+	]
+}

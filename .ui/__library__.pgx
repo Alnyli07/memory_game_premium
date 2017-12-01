@@ -3,18 +3,22 @@
 		{
 			"type": "Page",
 			"id": "57f4-201f-4bfc-5fc6",
+			"initialized": true,
 			"userProps": {},
+			"className": "",
+			"version": "6.5.3",
 			"props": {
 				"name": "__library__",
-				"parent": null,
 				"children": [
 					"23c1-aa21-38ff-148e",
-					"76f4-a7ec-36e9-a444"
+					"76f4-a7ec-36e9-a444",
+					"288d-6425-309a-12ff",
+					"e8d9-5019-61c9-1543",
+					"bc21-0f02-e69a-5163"
 				],
+				"parent": null,
 				"orientation": "PORTRAIT"
-			},
-			"version": "6.5.3",
-			"initialized": false
+			}
 		},
 		{
 			"type": "StatusBar",
@@ -22,9 +26,8 @@
 			"userProps": {},
 			"props": {
 				"name": "statusBar",
-				"parent": "57f4-201f-4bfc-5fc6",
 				"children": [],
-				"visible": true,
+				"parent": "57f4-201f-4bfc-5fc6",
 				"isRemovable": false
 			}
 		},
@@ -36,11 +39,202 @@
 			},
 			"props": {
 				"name": "headerBar",
-				"parent": "57f4-201f-4bfc-5fc6",
-				"children": [],
 				"title": "__library__",
-				"visible": true,
+				"children": [],
+				"parent": "57f4-201f-4bfc-5fc6",
 				"isRemovable": false
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "288d-6425-309a-12ff",
+			"source": {
+				"page": "__library__"
+			},
+			"userProps": {
+				"flexProps": {},
+				"left": 29.09090909090909,
+				"top": 23.636363636363633
+			},
+			"className": ".flexLayout game_board",
+			"props": {
+				"name": "gameBoard",
+				"children": [
+					"ffba-8837-d1da-da69"
+				],
+				"parent": "57f4-201f-4bfc-5fc6"
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "e8d9-5019-61c9-1543",
+			"source": {
+				"page": "__library__"
+			},
+			"userProps": {
+				"flexProps": {},
+				"left": 40,
+				"top": 243.63636363636363,
+				"width": 50,
+				"height": 50
+			},
+			"className": ".flexLayout board_item_active",
+			"props": {
+				"name": "boardItem",
+				"children": [],
+				"parent": "57f4-201f-4bfc-5fc6"
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "ffba-8837-d1da-da69",
+			"hiddenComponent": false,
+			"source": {
+				"page": "__library__",
+				"type": "boardItem",
+				"id": "e8d9-5019-61c9-1543"
+			},
+			"userProps": {
+				"flexProps": {
+					"positionType": "RELATIVE"
+				},
+				"left": 0,
+				"top": 0,
+				"width": 50,
+				"height": 50,
+				"flex": {
+					"positionType": 0
+				}
+			},
+			"className": ".flexLayout board_item_active",
+			"props": {
+				"name": "item0",
+				"children": [],
+				"parent": "288d-6425-309a-12ff"
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "bc21-0f02-e69a-5163",
+			"source": {
+				"page": "__library__"
+			},
+			"userProps": {
+				"left": 25.454545454545453,
+				"top": 338.18181818181813,
+				"width": 303.6363636363636,
+				"height": 118.18181818181817,
+				"flexProps": {
+					"flexDirection": "ROW"
+				}
+			},
+			"className": ".flexLayout leader_table_container",
+			"props": {
+				"name": "leaderCorner",
+				"children": [
+					"27d7-4f96-796e-b119",
+					"b8d6-9747-4483-8ab0"
+				],
+				"parent": "57f4-201f-4bfc-5fc6"
+			}
+		},
+		{
+			"type": "ImageView",
+			"id": "27d7-4f96-796e-b119",
+			"source": {
+				"page": "__library__"
+			},
+			"userProps": {
+				"image": "cup.png",
+				"imageFillType": "ASPECTFIT",
+				"height": null,
+				"width": null,
+				"marginTop": 5,
+				"marginBottom": 5,
+				"marginRight": 5,
+				"marginLeft": 5,
+				"flexProps": {
+					"flexGrow": 1
+				}
+			},
+			"className": ".imageView",
+			"props": {
+				"name": "icon",
+				"children": [],
+				"parent": "bc21-0f02-e69a-5163"
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "b8d6-9747-4483-8ab0",
+			"source": {
+				"page": "__library__"
+			},
+			"userProps": {
+				"width": null,
+				"height": null,
+				"flexProps": {
+					"flexGrow": 2,
+					"justifyContent": "CENTER"
+				}
+			},
+			"className": ".flexLayout",
+			"props": {
+				"name": "informationTable",
+				"children": [
+					"dcc1-90d9-b903-780a",
+					"3cfc-ec81-6f3d-a8de"
+				],
+				"parent": "bc21-0f02-e69a-5163"
+			}
+		},
+		{
+			"type": "Label",
+			"id": "dcc1-90d9-b903-780a",
+			"source": {
+				"page": "__library__"
+			},
+			"userProps": {
+				"width": null,
+				"height": 35,
+				"text": "Alyli07",
+				"textAlignment": "MIDCENTER",
+				"font": {
+					"family": "Nunito",
+					"size": 20,
+					"bold": true
+				}
+			},
+			"className": ".label",
+			"props": {
+				"name": "user",
+				"text": "Alyli07",
+				"children": [],
+				"parent": "b8d6-9747-4483-8ab0"
+			}
+		},
+		{
+			"type": "Label",
+			"id": "3cfc-ec81-6f3d-a8de",
+			"source": {
+				"page": "__library__"
+			},
+			"userProps": {
+				"width": null,
+				"height": 30,
+				"text": "6540",
+				"textAlignment": "MIDCENTER",
+				"font": {
+					"family": "Nunito",
+					"bold": false
+				}
+			},
+			"className": ".label",
+			"props": {
+				"name": "score",
+				"text": "6540",
+				"children": [],
+				"parent": "b8d6-9747-4483-8ab0"
 			}
 		}
 	]

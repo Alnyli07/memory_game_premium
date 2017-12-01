@@ -1,0 +1,68 @@
+{
+	"board_item_active": {
+		"backgroundColor": "rgba( 43, 216, 53, 1 )"
+	},
+	"game_board": {
+		"backgroundColor": "rgba( 146, 117, 231, 1 )"
+	},
+	"leader_table_container": {
+		"backgroundColor": "rgba( 184, 231, 244, 1 )",
+		"marginRight": 5
+	},
+	".flexLayout": {
+		"backgroundColor": "rgba( 255, 255, 255, 0 )"
+	},
+	".label": {
+		"backgroundColor": "rgba( 255, 255, 255, 0 )"
+	},
+	"pg_game_board": {
+		"backgroundColor": "rgba( 207, 236, 244, 1 )",
+		"+Device:Device.orientation === \"landscape\"": {
+			"flexProps": {
+				"flexDirection": "ROW"
+			}
+		}
+	},
+	"header_container": {
+		"width": null,
+		"flexProps": {
+			"flexGrow": 1
+		},
+		"height": null
+	},
+	"header_container_head": {
+		"width": null,
+		"height": null,
+		"flexProps": {
+			"flexGrow": null,
+			"flexDirection": "ROW"
+		},
+		"minHeight": 90,
+		"marginTop": 25
+	},
+	"header_container_head_leader": {
+		"left": 0,
+		"top": 0,
+		"height": 90,
+		"borderRadius": 5,
+		"flexProps": {
+			"flexDirection": "ROW",
+			"positionType": "RELATIVE",
+			"flexGrow": 1
+		},
+		"flex": {
+			"flexDirection": 2,
+			"positionType": 0
+		},
+		"backgroundColor": "rgba( 184, 231, 244, 1 )",
+		"marginRight": 5,
+		"width": null
+	},
+	"header_container_head_icon": {
+		"width": null,
+		"height": null,
+		"flexProps": {
+			"flexGrow": 1
+		}
+	}
+}
