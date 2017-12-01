@@ -3,6 +3,7 @@
 */
 const extend = require('js-base/core/extend');
 const PgGameBoardDesign = require('ui/ui_pgGameBoard');
+const Screen = require('sf-core/device/screen');
 
 const PgGameBoard = extend(PgGameBoardDesign)(
   // Constructor
@@ -13,7 +14,6 @@ const PgGameBoard = extend(PgGameBoardDesign)(
     this.onShow = onShow.bind(this, this.onShow.bind(this));
     // overrides super.onLoad method
     this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
-
   });
 
 /**
@@ -33,6 +33,8 @@ function onShow(superOnShow) {
  */
 function onLoad(superOnLoad) {
   superOnLoad();
+  this.gameBoard.createBoard(Screen.width - 22, 3);
+  console.log("Screen:" + Screen.width + " .height "+ Screen.height);
 }
 
 module && (module.exports = PgGameBoard);

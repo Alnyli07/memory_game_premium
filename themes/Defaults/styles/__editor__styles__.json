@@ -14,7 +14,10 @@
 	},
 	".label": {
 		"backgroundColor": "rgba( 255, 255, 255, 0 )",
-		"textColor": "rgba( 33, 33, 33, 1 )"
+		"textColor": "rgba( 33, 33, 33, 1 )",
+		"font": {
+			"family": "Nunito"
+		}
 	},
 	"#pg_game_board": {
 		"+Device:Device.orientation === \"landscape\"": {
@@ -25,29 +28,28 @@
 		"paddingLeft": 10,
 		"paddingRight": 10,
 		"paddingBottom": 10,
-		"paddingTop": 10
+		"paddingTop": 10,
+		"flexProps": {
+			"justifyContent": "SPACE_BETWEEN"
+		}
 	},
 	"#header_container": {
 		"width": null,
-		"flexProps": {
-			"flexGrow": 0.95
-		},
-		"height": null,
+		"flexProps": {},
 		"+Device:Device.orientation === \"landscape\"": {
 			"flexProps": {
 				"justifyContent": "SPACE_BETWEEN"
 			}
 		},
-		"paddingLeft": 10,
-		"paddingRight": 10
+		"height": 200
 	},
 	"#header_container_head": {
 		"width": null,
-		"height": 90,
+		"height": null,
 		"flexProps": {
-			"flexDirection": "ROW"
-		},
-		"marginTop": 25
+			"flexDirection": "ROW",
+			"flexGrow": 1
+		}
 	},
 	"#header_container_head_leader": {
 		"left": null,
@@ -77,34 +79,34 @@
 	},
 	"#header_container_flbuttons": {
 		"width": null,
-		"height": null,
 		"flexProps": {
 			"flexDirection": "ROW",
 			"flexGrow": 1
 		},
-		"maxHeight": 100
+		"marginLeft": 5,
+		"marginRight": 5,
+		"height": null
 	},
 	"#gameboard": {
 		"left": 0,
 		"top": 0,
 		"width": null,
-		"height": null,
+		"height": 300,
 		"flexProps": {
 			"positionType": "RELATIVE",
-			"flexGrow": 1
+			"flexWrap": "WRAP",
+			"flexDirection": "ROW"
 		},
 		"flex": {
 			"positionType": 0
 		},
-		"borderWidth": 1,
 		"borderColor": "rgba( 189, 189, 189, 1 )",
-		"marginLeft": 5,
-		"marginRight": 5,
-		"marginBottom": 5,
-		"marginTop": 5,
 		"+Device:Device.orientation === \"landscape\"": {
-			"marginTop": 20
-		}
+			"flexProps": {
+				"flexDirection": "COLUMN"
+			}
+		},
+		"borderWidth": 1
 	},
 	"#header_container_flbuttons_flinfo": {
 		"width": null,
@@ -116,9 +118,12 @@
 		}
 	},
 	"#header_container_flbuttons_flbutton": {
-		"width": 80,
-		"height": 80,
-		"flexProps": {}
+		"width": null,
+		"height": null,
+		"flexProps": {
+			"flexGrow": 1,
+			"alignSelf": "STRETCH"
+		}
 	},
 	"#header_container_flbuttons_timer": {
 		"flexProps": {
@@ -127,9 +132,7 @@
 			"flexGrow": 0.7,
 			"flexDirection": "ROW"
 		},
-		"marginRight": 5,
-		"paddingTop": 10,
-		"paddingLeft": 10
+		"marginRight": 5
 	},
 	"": {
 		"flexProps": {},
@@ -152,13 +155,12 @@
 		"marginRight": 5
 	},
 	"#header_container_flbuttons_flinfo_label": {
-		"height": 40,
+		"height": 30,
 		"textAlignment": "MIDLEFT",
 		"width": null,
 		"flexProps": {
 			"alignSelf": "STRETCH"
 		},
-		"marginLeft": 5,
 		"font": {
 			"size": 18
 		}
@@ -183,5 +185,8 @@
 	},
 	".button": {
 		"backgroundColor": "rgba( 3, 169, 244, 1 )"
+	},
+	".headerBar": {
+		"backgroundColor": "rgba( 179, 229, 252, 1 )"
 	}
 }

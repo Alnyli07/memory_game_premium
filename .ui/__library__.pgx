@@ -78,7 +78,7 @@
 				"left": 72.8395061728395,
 				"top": 234.5679012345679
 			},
-			"className": ".flexLayout .board_item_passive .board_item_empty .board_item_right .board_item_wrong",
+			"className": ".board_item_passive .board_item_empty .board_item_right .board_item_wrong",
 			"props": {
 				"name": "boardItem",
 				"children": [],

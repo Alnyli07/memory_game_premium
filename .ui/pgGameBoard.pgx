@@ -37,13 +37,13 @@
 			"type": "HeaderBar",
 			"id": "ea2e-c9eb-cc02-6d9d",
 			"userProps": {
-				"title": "Level 1",
-				"visible": false
+				"title": "Game Board",
+				"visible": true
 			},
 			"className": ".headerBar",
 			"props": {
 				"name": "headerBar",
-				"title": "Level 1",
+				"title": "Game Board",
 				"children": [],
 				"parent": "a4e7-a864-2d6f-0667",
 				"isRemovable": false
@@ -62,6 +62,7 @@
 			"className": ".flexLayout #gameboard",
 			"props": {
 				"name": "gameBoard",
+				"usePageVariable": true,
 				"children": [],
 				"parent": "a4e7-a864-2d6f-0667"
 			}
@@ -86,16 +87,19 @@
 			"id": "02f2-265b-3ded-dfe0",
 			"userProps": {
 				"width": null,
-				"height": 100,
 				"text": "Click play button to start next level.",
 				"textAlignment": "MIDCENTER",
 				"multiline": true,
+				"left": 0,
+				"top": 0,
+				"height": null,
 				"font": {
-					"size": 20,
+					"size": 18,
 					"family": "Nunito"
 				},
-				"left": 0,
-				"top": 0
+				"flexProps": {
+					"flexGrow": 1
+				}
 			},
 			"className": ".label",
 			"props": {
