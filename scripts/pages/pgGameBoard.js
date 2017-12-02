@@ -6,6 +6,8 @@ const PgGameBoardDesign = require('ui/ui_pgGameBoard');
 const Screen = require('sf-core/device/screen');
 const System = require('sf-core/device/system');
 const GameEngine = require("lib/game/engine");
+const http = require("lib/net/http");
+const Timer = require("sf-core/timer");
 
 const HEADER_HEIGHT = System.OS === "Android" ? 80 : 64;
 const MEMORIZE_TIME = 2200;
@@ -59,6 +61,7 @@ function onLoad(superOnLoad) {
   this._rowCount = 3;
   setContainerSize.call(this);
   this.gameBoard.createBoard(this._boardWidth, this._rowCount);
+  updateLeaderCorner.call(this);
   //console.log("Screen:" + Screen.width + " .height " + Screen.height + "System:" + (Screen.height - Screen.width - HEADER_HEIGHT));
 }
 
@@ -107,14 +110,16 @@ function setContainerSize() {
 }
 
 function startBtnPress(e) {
+  this.startBtn.touchEnabled = false;
   switch (this._gameState) {
     case GAME_STATE.READY:
       this._gameEngine.initGame();
       this._gameEngine.showGame();
       break;
     case GAME_STATE.COMPLETED:
+      updateLeaderCorner.call(this);
       this._gameLevel += 1;
-      this._rowCount += ((this._gameLevel % 4 )=== 0) ? 1 : 0; 
+      this._rowCount += ((this._gameLevel % 4) === 0) ? 1 : 0;
       this.gameBoard.createBoard(this._boardWidth, this._rowCount);
       this._gameEngine.setNextLevel();
       this.layout.applyLayout();
@@ -134,6 +139,7 @@ function startBtnPress(e) {
 
 function onGameFinish(isNextLevel) {
   //console.log("Game Finished" + isNextLevel);
+  updateNewLeader.call(this);
   this.startBtn.dispatch({
     type: "updateUserStyle",
     userStyle: {
@@ -142,9 +148,31 @@ function onGameFinish(isNextLevel) {
   });
   if (isNextLevel) {
     this._gameState = GAME_STATE.COMPLETED;
-  }else{
+  }
+  else {
     this._gameState = GAME_STATE.OVER;
   }
 
 }
+
+function updateLeaderCorner() {
+
+  http.reqGetLeader((err, res) => {
+    if (err) return;
+    this._leader = JSON.parse(res);
+    this.leaderCorner.user.text = this._leader.user;
+    this.leaderCorner.score.text = this._leader.score;
+  });
+
+}
+
+function updateNewLeader() {
+  var score = this._gameEngine.getScore();
+  if (this._leader.score >= score)
+    return;
+  http.reqNewLeader("alnyli", score, (err, res) => {
+    if (err) return;
+  });
+}
+
 module && (module.exports = PgGameBoard);

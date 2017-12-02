@@ -1,10 +1,10 @@
 /*global lang */
 const Timer = require("sf-core/timer");
 const AlertView = require('sf-core/ui/alertview');
-const MEMORIZE_TIME = 2200;
+const MEMORIZE_TIME = 2100;
 const INTERVAL_DELAY = 1000;
-const PENALTY_COEFFICENT = 1.33;
-const LEVEL_COEFFICENT = 1.4;
+const PENALTY_COEFFICENT = 1.13;
+const LEVEL_COEFFICENT = 1.3;
 const SUCCESS_TRESHOLD = 65;
 const GAME_STATE = {
     READY: "ready",
@@ -75,6 +75,7 @@ function Engine(context) {
         showAlert(nextLevel);
 
     };
+    this.getScore = e => score; 
 }
 
 Engine.MEMORIZE_TIME = MEMORIZE_TIME;
@@ -122,7 +123,7 @@ function checkIsGameFinished(context) {
     var items = context.gameBoard._items,
         list = context.gameBoard._list,
         itemState, modfiedCount = 0;
-    console.log("List checkGAme: " + list.join(", "));
+    //console.log("List checkGAme: " + list.join(", "));
     items.forEach((item, index) => {
         itemState = item.getState();
         if (itemState === "right" && (list.indexOf(index) !== -1)) {
@@ -140,11 +141,11 @@ function setGameResult(context) {
         wrongCount = 0,
         modifiedList = [];
 
-    console.log("List setGameResult: " + list.join(", "));
+    //console.log("List setGameResult: " + list.join(", "));
     items.forEach((item, index) => {
         itemState = item.getState();
         if (itemState === "right") {
-            console.log("Index: " + index);
+            //console.log("Index: " + index);
             if (list.indexOf(index) !== -1) {
                 rightCount += 1;
             }

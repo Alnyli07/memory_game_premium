@@ -41,4 +41,8 @@ function loginPress(){
   Router.go("pgGameBoard");
 }
 
+function usernameIsValid(username) {
+    return /^[0-9a-zA-Z_.-]+$/.test(username) && (username.length < 7 && username.length > 3);
+}
+
 module && (module.exports = LoginPageFB001);

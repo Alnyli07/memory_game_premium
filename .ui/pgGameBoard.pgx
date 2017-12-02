@@ -139,11 +139,13 @@
 				"id": "bc21-0f02-e69a-5163"
 			},
 			"userProps": {
-				"flexProps": {}
+				"flexProps": {},
+				"usePageVariable": true
 			},
 			"className": ".flexLayout #header_container_head_leader",
 			"props": {
 				"name": "leaderCorner",
+				"usePageVariable": true,
 				"children": [],
 				"parent": "43f6-b7aa-6bd8-0480"
 			}
