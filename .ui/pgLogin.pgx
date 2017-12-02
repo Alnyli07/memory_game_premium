@@ -5,20 +5,9 @@
 			"id": "bd64-0489-48bb-d884",
 			"initialized": true,
 			"userProps": {
-				"paddingLeft": 20,
-				"paddingRight": 20,
-				"paddingBottom": null,
-				"layout": {},
-				"flex": {},
-				"font": {},
-				"defaults": {},
-				"flexProps": {
-					"justifyContent": "SPACE_AROUND",
-					"alignContent": "STRETCH",
-					"alignItems": "STRETCH"
-				}
+				"orientation": "AUTO"
 			},
-			"className": ".page",
+			"className": ".page .pgLogin_page",
 			"version": "6.4.5-rc.1",
 			"props": {
 				"name": "pgLogin",
@@ -26,13 +15,10 @@
 					"d7a7-b981-2acb-0a7e",
 					"7c02-6a1f-8e2f-6810",
 					"0e60-30e3-be85-5ffc",
-					"b125-692d-41d4-e2e0",
-					"4899-aee3-163e-8de1",
-					"8a92-edd5-b256-9f63",
-					"5576-94aa-ae54-0104"
+					"246d-b64a-2e1a-403d"
 				],
 				"parent": null,
-				"orientation": "PORTRAIT"
+				"orientation": "AUTO"
 			}
 		},
 		{
@@ -85,7 +71,7 @@
 				"flexProps": {
 					"alignItems": "CENTER",
 					"justifyContent": "CENTER",
-					"flexGrow": 3.5
+					"flexGrow": 3
 				}
 			},
 			"className": ".flexLayout",
@@ -145,7 +131,78 @@
 		},
 		{
 			"type": "FlexLayout",
-			"id": "b125-692d-41d4-e2e0",
+			"id": "246d-b64a-2e1a-403d",
+			"userProps": {},
+			"className": ".flexLayout .pgLogin_inputLayout",
+			"props": {
+				"name": "inputLayout",
+				"children": [
+					"d9b4-2f68-4245-b324",
+					"3879-baae-dfec-89a6",
+					"ddb0-05c2-6929-7b98",
+					"91ae-278e-88e6-2ebb"
+				],
+				"parent": "bd64-0489-48bb-d884"
+			}
+		},
+		{
+			"type": "Button",
+			"id": "ddb0-05c2-6929-7b98",
+			"userProps": {
+				"width": null,
+				"text": "Login with Facebook",
+				"height": null,
+				"usePageVariable": true,
+				"flexProps": {
+					"flexGrow": 0.8
+				},
+				"font": {
+					"family": "Nunito",
+					"bold": true
+				},
+				"left": 0,
+				"top": 0
+			},
+			"className": ".button",
+			"props": {
+				"name": "fbLoginbutton",
+				"text": "Login with Facebook",
+				"usePageVariable": true,
+				"children": [],
+				"parent": "246d-b64a-2e1a-403d"
+			}
+		},
+		{
+			"type": "Button",
+			"id": "3879-baae-dfec-89a6",
+			"userProps": {
+				"width": null,
+				"text": "Login",
+				"height": null,
+				"marginBottom": 5,
+				"usePageVariable": true,
+				"flexProps": {
+					"flexGrow": 0.8
+				},
+				"font": {
+					"family": "Nunito",
+					"bold": true
+				},
+				"left": 0,
+				"top": 0
+			},
+			"className": ".button",
+			"props": {
+				"name": "loginbutton",
+				"text": "Login",
+				"usePageVariable": true,
+				"children": [],
+				"parent": "246d-b64a-2e1a-403d"
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "d9b4-2f68-4245-b324",
 			"userProps": {
 				"backgroundColor": "rgba( 255, 255, 255, 0 )",
 				"width": null,
@@ -153,22 +210,24 @@
 				"maxHeight": null,
 				"flexProps": {
 					"flexGrow": 1.1
-				}
+				},
+				"left": 0,
+				"top": 0
 			},
 			"className": ".flexLayout",
 			"props": {
 				"name": "userName",
 				"children": [
-					"d01b-304c-55a1-06f2",
-					"c369-a212-1536-530d",
-					"8338-c6f6-9eaa-153a"
+					"6310-f3e3-e0d5-af31",
+					"bdb7-858b-8e8c-8b2d",
+					"dac8-2f16-e519-1ed9"
 				],
-				"parent": "bd64-0489-48bb-d884"
+				"parent": "246d-b64a-2e1a-403d"
 			}
 		},
 		{
 			"type": "Label",
-			"id": "d01b-304c-55a1-06f2",
+			"id": "6310-f3e3-e0d5-af31",
 			"userProps": {
 				"height": 21,
 				"width": null,
@@ -188,12 +247,12 @@
 				"name": "userNameLbl",
 				"text": "USERNAME",
 				"children": [],
-				"parent": "b125-692d-41d4-e2e0"
+				"parent": "d9b4-2f68-4245-b324"
 			}
 		},
 		{
 			"type": "TextBox",
-			"id": "c369-a212-1536-530d",
+			"id": "bdb7-858b-8e8c-8b2d",
 			"userProps": {
 				"width": null,
 				"height": 40,
@@ -210,12 +269,12 @@
 				"name": "userNameInput",
 				"text": "alnyli07",
 				"children": [],
-				"parent": "b125-692d-41d4-e2e0"
+				"parent": "d9b4-2f68-4245-b324"
 			}
 		},
 		{
 			"type": "FlexLayout",
-			"id": "8338-c6f6-9eaa-153a",
+			"id": "dac8-2f16-e519-1ed9",
 			"userProps": {
 				"borderWidth": 0,
 				"backgroundColor": "rgba( 226, 226, 226, 1 )",
@@ -232,12 +291,37 @@
 			"props": {
 				"name": "userNameLine",
 				"children": [],
-				"parent": "b125-692d-41d4-e2e0"
+				"parent": "d9b4-2f68-4245-b324"
 			}
 		},
 		{
 			"type": "FlexLayout",
-			"id": "5576-94aa-ae54-0104",
+			"id": "91ae-278e-88e6-2ebb",
+			"userProps": {
+				"backgroundColor": "rgba( 255, 255, 255, 0 )",
+				"width": null,
+				"height": null,
+				"left": 0,
+				"top": 0,
+				"flexProps": {
+					"flexDirection": "ROW",
+					"alignItems": "FLEX_START",
+					"justifyContent": "CENTER",
+					"flexGrow": 1.5
+				}
+			},
+			"className": ".flexLayout",
+			"props": {
+				"name": "loginPageFooter",
+				"children": [
+					"f2f0-0b41-b5f8-1eca"
+				],
+				"parent": "246d-b64a-2e1a-403d"
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "f2f0-0b41-b5f8-1eca",
 			"userProps": {
 				"backgroundColor": "rgba( 255, 255, 255, 0 )",
 				"width": null,
@@ -247,64 +331,15 @@
 					"alignItems": "FLEX_START",
 					"justifyContent": "CENTER",
 					"flexGrow": 1
-				}
+				},
+				"left": 0,
+				"top": 0
 			},
 			"className": ".flexLayout",
 			"props": {
 				"name": "loginPageFooter",
 				"children": [],
-				"parent": "bd64-0489-48bb-d884"
-			}
-		},
-		{
-			"type": "Button",
-			"id": "4899-aee3-163e-8de1",
-			"userProps": {
-				"width": null,
-				"text": "Login",
-				"height": null,
-				"marginBottom": 5,
-				"usePageVariable": true,
-				"flexProps": {
-					"flexGrow": 0.8
-				},
-				"font": {
-					"family": "Nunito",
-					"bold": true
-				}
-			},
-			"className": ".button",
-			"props": {
-				"name": "loginbutton",
-				"text": "Login",
-				"usePageVariable": true,
-				"children": [],
-				"parent": "bd64-0489-48bb-d884"
-			}
-		},
-		{
-			"type": "Button",
-			"id": "8a92-edd5-b256-9f63",
-			"userProps": {
-				"width": null,
-				"text": "Login with Facebook",
-				"height": null,
-				"usePageVariable": true,
-				"flexProps": {
-					"flexGrow": 0.8
-				},
-				"font": {
-					"family": "Nunito",
-					"bold": true
-				}
-			},
-			"className": ".button",
-			"props": {
-				"name": "fbLoginbutton",
-				"text": "Login with Facebook",
-				"usePageVariable": true,
-				"children": [],
-				"parent": "bd64-0489-48bb-d884"
+				"parent": "91ae-278e-88e6-2ebb"
 			}
 		}
 	]

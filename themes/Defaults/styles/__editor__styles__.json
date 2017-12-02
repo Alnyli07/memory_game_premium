@@ -30,7 +30,9 @@
 		"paddingBottom": 10,
 		"paddingTop": 10,
 		"flexProps": {
-			"justifyContent": "SPACE_BETWEEN"
+			"justifyContent": "SPACE_BETWEEN",
+			"alignItems": "STRETCH",
+			"alignContent": "STRETCH"
 		}
 	},
 	"#header_container": {
@@ -39,7 +41,9 @@
 		"+Device:Device.orientation === \"landscape\"": {
 			"flexProps": {
 				"justifyContent": "SPACE_BETWEEN"
-			}
+			},
+			"width": 300,
+			"height": null
 		},
 		"height": 200
 	},
@@ -103,9 +107,9 @@
 		},
 		"borderColor": "rgba( 189, 189, 189, 1 )",
 		"+Device:Device.orientation === \"landscape\"": {
-			"flexProps": {
-				"flexDirection": "COLUMN"
-			}
+			"flexProps": {},
+			"height": null,
+			"width": 300
 		},
 		"borderWidth": 1
 	},
@@ -122,7 +126,6 @@
 		"width": null,
 		"height": null,
 		"flexProps": {
-			"flexGrow": 1,
 			"alignSelf": "CENTER"
 		}
 	},
@@ -132,8 +135,7 @@
 			"justifyContent": "FLEX_START",
 			"flexGrow": 0.7,
 			"flexDirection": "ROW"
-		},
-		"marginRight": 5
+		}
 	},
 	"": {
 		"flexProps": {},
@@ -189,5 +191,35 @@
 	},
 	".headerBar": {
 		"backgroundColor": "rgba( 179, 229, 252, 1 )"
+	},
+	".pgLogin_inputLayout": {
+		"width": null,
+		"height": null,
+		"flexProps": {
+			"flexGrow": 3
+		},
+		"+Device:Device.orientation === \"landscape\"": {
+			"marginTop": 100,
+			"marginLeft": 20
+		}
+	},
+	".pgLogin_page": {
+		"paddingLeft": 20,
+		"paddingRight": 20,
+		"paddingBottom": null,
+		"layout": {},
+		"flex": {},
+		"font": {},
+		"defaults": {},
+		"flexProps": {
+			"justifyContent": "SPACE_AROUND",
+			"alignContent": "STRETCH",
+			"alignItems": "STRETCH"
+		},
+		"+Device:Device.orientation === \"landscape\"": {
+			"flexProps": {
+				"flexDirection": "ROW"
+			}
+		}
 	}
 }

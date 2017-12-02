@@ -39,4 +39,12 @@ SMF.i18n.defineLanguage('en', {
 	"scanFingerprintMessage": "Scan your finger",
 	"noInternetMessage": "No Internet Connection",
 	"noInternetTitle": "Connection Failed",
+	"memorize": "You should memorize board in 2 seconds",
+	"playing": "Hurry up ! Find them",
+	"tryagain": "please try again",
+	"nextLevel": "You can play next level",
+	"success_rate": "Your succes rate",
+	"result": "Game result is shown in the below",
+	"game_over": "Game Over",
+	"game_continue": "Congratulations !"
 });

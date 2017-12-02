@@ -14,7 +14,8 @@
 					"76f4-a7ec-36e9-a444",
 					"288d-6425-309a-12ff",
 					"e8d9-5019-61c9-1543",
-					"bc21-0f02-e69a-5163"
+					"bc21-0f02-e69a-5163",
+					"3c50-55ec-342c-f3dd"
 				],
 				"parent": null,
 				"orientation": "PORTRAIT"
@@ -37,6 +38,7 @@
 			"userProps": {
 				"title": "__library__"
 			},
+			"className": "",
 			"props": {
 				"name": "headerBar",
 				"title": "__library__",
@@ -74,11 +76,9 @@
 				"page": "__library__"
 			},
 			"userProps": {
-				"flexProps": {},
-				"left": 72.8395061728395,
-				"top": 234.5679012345679
+				"flexProps": {}
 			},
-			"className": ".board_item_passive .board_item_empty .board_item_right .board_item_wrong",
+			"className": ".board_item_passive",
 			"props": {
 				"name": "boardItem",
 				"children": [],
@@ -235,6 +235,20 @@
 				"text": "6540",
 				"children": [],
 				"parent": "b8d6-9747-4483-8ab0"
+			}
+		},
+		{
+			"type": "FlexLayout",
+			"id": "3c50-55ec-342c-f3dd",
+			"source": {
+				"page": "__library__"
+			},
+			"userProps": {},
+			"className": ".flexLayout .board_item_right .board_item_passive .board_item_empty .board_item_wrong",
+			"props": {
+				"name": "flexLayout1",
+				"children": [],
+				"parent": "57f4-201f-4bfc-5fc6"
 			}
 		}
 	]

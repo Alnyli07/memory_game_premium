@@ -94,11 +94,11 @@
         "output": {
             "ios": {
                 "outputFolder": "output/iOS",
-                "bundleIdentifier": "io.smartface.demo"
+                "bundleIdentifier": "io.smartface.memory"
             },
             "android": {
                 "outputFolder": "output/Android",
-                "packageName": "io.smartface.demo"
+                "packageName": "io.smartface.memory"
             }
         },
         "tempFolder": "output/.tmp"

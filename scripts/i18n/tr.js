@@ -36,5 +36,13 @@ SMF.i18n.defineLanguage('tr', {
 	"updateFail": "Güncelleme başarısız oldu",
 	"updateIsInProgress": "Güncelleme sürüyor",
 	"noInternetMessage": "İnternet Bağlantısı yok",
-	"noInternetTitle": "Bağlanamıyor"
+	"noInternetTitle": "Bağlanamıyor",
+	"memorize": "2 saniye içinde ezberle",
+	"playing": "Acele et bul onları",
+	"tryagain": "lütfen tekrar deneyin",
+	"nextLevel": "Yeni bölümü oynayabilirsin",
+	"success_rate": "Başarı oranın",
+	"result": "Oyun sonucu aşağıda gösteriliyor",
+	"game_over": "Oyun bitti",
+	"game_continue": "Tebrikler !"
 });
