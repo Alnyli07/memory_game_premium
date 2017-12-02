@@ -42,12 +42,14 @@ function Engine(context) {
 
     this.setNextLevel = e => {
         ++level;
-        row += Math.floor(level / 2);
+        row = context._rowCount;
+        totalTime += 1;
         setTexts(context, score, level, totalTime);
     };
 
     this.showGame = e => {
         context.gameBoard.touchEnabled = false;
+        context.startBtn.touchEnabled = false;
         context.gameBoard.clearBoard();
         context.gameBoard.initBoard(level);
         context.lblInfo.text = lang["memorize"];
@@ -66,6 +68,7 @@ function Engine(context) {
                 image: "timeroff.png"
             }
         });
+        context.startBtn.touchEnabled = true;
         score += nextLevel ? getScore(level, res) : 0;
         setTexts(context, score, level, totalTime);
         this.onFinish && this.onFinish(nextLevel);
@@ -119,12 +122,11 @@ function checkIsGameFinished(context) {
     var items = context.gameBoard._items,
         list = context.gameBoard._list,
         itemState, modfiedCount = 0;
+    console.log("List checkGAme: " + list.join(", "));
     items.forEach((item, index) => {
         itemState = item.getState();
-        if (itemState === "right") {
-            if (list.find(l => l === index)) {
-                modfiedCount += 1;
-            }
+        if (itemState === "right" && (list.indexOf(index) !== -1)) {
+            modfiedCount += 1;
         }
     });
     return list.length === modfiedCount;
@@ -137,10 +139,13 @@ function setGameResult(context) {
         emptyCount = 0,
         wrongCount = 0,
         modifiedList = [];
+
+    console.log("List setGameResult: " + list.join(", "));
     items.forEach((item, index) => {
         itemState = item.getState();
         if (itemState === "right") {
-            if (list.find(l => l === index)) {
+            console.log("Index: " + index);
+            if (list.indexOf(index) !== -1) {
                 rightCount += 1;
             }
             else {

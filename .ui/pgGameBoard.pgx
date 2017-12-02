@@ -99,11 +99,11 @@
 				"usePageVariable": true,
 				"marginTop": 10,
 				"font": {
-					"size": 18,
+					"size": 17,
 					"family": "Nunito"
 				},
 				"flexProps": {
-					"flexGrow": 1
+					"flexGrow": 1.1
 				}
 			},
 			"className": ".label",

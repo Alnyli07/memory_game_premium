@@ -78,12 +78,13 @@ function updateBoardItemSize(width) {
 	});
 }
 
-function getRandomInt(min, max, ignoreList) {
+function getRandomInt(min, max, _ignoreList) {
 	min = Math.ceil(min);
 	max = Math.floor(max);
 	var res = Math.floor(Math.random() * (max - min)) + min;
-	if (ignoreList.find(e => e === res))
-		return getRandomInt(min, max, ignoreList);
+	if (_ignoreList.indexOf(res) !== -1) {
+		return getRandomInt(min, max, _ignoreList);
+	}
 	return res;
 }
 

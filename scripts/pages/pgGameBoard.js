@@ -9,6 +9,7 @@ const GameEngine = require("lib/game/engine");
 
 const HEADER_HEIGHT = System.OS === "Android" ? 80 : 64;
 const MEMORIZE_TIME = 2200;
+const BASE_ROWCOUNT = 3;
 const GAME_STATE = {
   READY: "ready",
   PLAYING: "playing",
@@ -113,16 +114,17 @@ function startBtnPress(e) {
       break;
     case GAME_STATE.COMPLETED:
       this._gameLevel += 1;
-      this._rowCount += Math.floor(this._gameLevel / 3);
-      this._gameEngine.setNextLevel();
+      this._rowCount += ((this._gameLevel % 4 )=== 0) ? 1 : 0; 
       this.gameBoard.createBoard(this._boardWidth, this._rowCount);
+      this._gameEngine.setNextLevel();
       this.layout.applyLayout();
       this._gameEngine.showGame();
       break;
     case GAME_STATE.OVER:
       this._gameLevel = 1;
-      this._rowCount = 3;
+      this._rowCount = BASE_ROWCOUNT;
       this.gameBoard.createBoard(this._boardWidth, this._rowCount);
+      this.layout.applyLayout();
       this._gameEngine.initGame();
       this._gameEngine.showGame();
       break;
