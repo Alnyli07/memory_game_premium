@@ -113,7 +113,7 @@ function startBtnPress(e) {
       break;
     case GAME_STATE.COMPLETED:
       this._gameLevel += 1;
-      this._rowCount += Math.floor(this._gameLevel / 2);
+      this._rowCount += Math.floor(this._gameLevel / 3);
       this._gameEngine.setNextLevel();
       this.gameBoard.createBoard(this._boardWidth, this._rowCount);
       this.layout.applyLayout();
@@ -122,6 +122,7 @@ function startBtnPress(e) {
     case GAME_STATE.OVER:
       this._gameLevel = 1;
       this._rowCount = 3;
+      this.gameBoard.createBoard(this._boardWidth, this._rowCount);
       this._gameEngine.initGame();
       this._gameEngine.showGame();
       break;

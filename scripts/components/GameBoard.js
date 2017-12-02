@@ -39,12 +39,14 @@ function createBoard(width, row) {
 		this.addChild(item, PREFIX + i, ".board_item_passive", function(style) {
 			style.width = itemSize;
 			style.height = itemSize;
+			style.left = 0;
 			style.marginLeft = 5;
 			style.marginTop = 5;
 			if ((i / row) >= (row - 1))
 				style.marginBottom = 5;
 			return style;
 		});
+		item.applyLayout();
 	}
 	//console.log("Width"+width+" . "+itemSize);
 }

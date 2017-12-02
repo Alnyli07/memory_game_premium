@@ -155,7 +155,7 @@ function setGameResult(context) {
         items[l].setItemStyle("empty");
     });
     var rights = (rightCount - emptyCount - (wrongCount * PENALTY_COEFFICENT));
-    return rightCount > 0 ? (rights * 100) / (rightCount).toFixed(2) : 0;
+    return rightCount > 0 ? ((rights * 100) / (rightCount)).toFixed(2) : 0;
 }
 
 function showAlert(nextLevel) {
