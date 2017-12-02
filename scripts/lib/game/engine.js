@@ -43,7 +43,7 @@ function Engine(context) {
     this.setNextLevel = e => {
         ++level;
         row = context._rowCount;
-        totalTime += 1;
+        totalTime +=  ((level % 2) === 0 ) ? 1 : 0;
         setTexts(context, score, level, totalTime);
     };
 
