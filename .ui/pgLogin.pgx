@@ -260,14 +260,16 @@
 				"backgroundColor": "rgba( 255, 255, 255, 0 )",
 				"borderColor": "rgba( 197, 197, 197, 1 )",
 				"textColor": "rgba( 63, 63, 63, 1 )",
+				"usePageVariable": true,
 				"font": {
 					"family": "Nunito"
 				}
 			},
 			"className": ".textBox",
 			"props": {
-				"name": "userNameInput",
+				"name": "userName",
 				"text": "alnyli07",
+				"usePageVariable": true,
 				"children": [],
 				"parent": "d9b4-2f68-4245-b324"
 			}

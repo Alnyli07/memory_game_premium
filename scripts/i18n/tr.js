@@ -44,5 +44,7 @@ SMF.i18n.defineLanguage('tr', {
 	"success_rate": "Başarı oranın",
 	"result": "Oyun sonucu aşağıda gösteriliyor",
 	"game_over": "Oyun bitti",
-	"game_continue": "Tebrikler !"
+	"game_continue": "Tebrikler !",
+	"invalid_user_name_title": "Yanlış Kullanıcı ismi",
+	"invalid_user_name_message": "kullanıcı ismi özel karakterler içermemelidir ve uzunluğu 3 ile 7 arasında olmalıdır."
 });

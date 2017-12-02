@@ -46,5 +46,7 @@ SMF.i18n.defineLanguage('en', {
 	"success_rate": "Your succes rate",
 	"result": "Game result is shown in the below",
 	"game_over": "Game Over",
-	"game_continue": "Congratulations !"
+	"game_continue": "Congratulations !",
+	"invalid_user_name_title": "Invalid Username",
+	"invalid_user_name_message": "username must not contain any special characters and the length must be between 3 and 7"
 });

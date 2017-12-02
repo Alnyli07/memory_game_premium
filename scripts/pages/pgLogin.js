@@ -1,9 +1,11 @@
 /* 
 		You can modify its contents.
 */
+/*global lang */
 const extend = require('js-base/core/extend');
 const LoginPageFB001Design = require('ui/ui_pgLogin');
 const Router = require("sf-core/ui/router");
+const AlertView = require('sf-core/ui/alertview');
 
 const LoginPageFB001 = extend(LoginPageFB001Design)(
   // Constructor
@@ -37,12 +39,29 @@ function onLoad(superOnLoad) {
   superOnLoad();
 }
 
-function loginPress(){
-  Router.go("pgGameBoard");
+function loginPress() {
+  var text = this.userName.text;
+  console.log("Text: "+ text);
+  if (usernameIsValid(text)) {
+    Router.go("pgGameBoard");
+  }else{
+    showAlert();
+  }
+}
+
+function showAlert() {
+  var myAlertView = new AlertView({
+    title: lang["invalid_user_name_title"],
+    message: lang["invalid_user_name_message"]
+  });
+  myAlertView.addButton({
+    text: lang["ok"]
+  });
+  myAlertView.show();
 }
 
 function usernameIsValid(username) {
-    return /^[0-9a-zA-Z_.-]+$/.test(username) && (username.length < 7 && username.length > 3);
+  return /^[0-9a-zA-Z_.-]+$/.test(username) && (username.length < 7 && username.length > 3);
 }
 
 module && (module.exports = LoginPageFB001);
