@@ -49,5 +49,6 @@ SMF.i18n.defineLanguage('en', {
 	"game_continue": "Congratulations !",
 	"invalid_user_name_title": "Invalid Username",
 	"invalid_user_name_message": "username must not contain any special characters and the length must be between 3 and 7",
-	"newGame": "Click start a new game"
+	"newGame": "Click start a new game",
+	"new_leader": "You're the new leader !"
 });

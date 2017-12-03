@@ -7,7 +7,7 @@ const MEMORIZE_TIME = 2100;
 const INTERVAL_DELAY = 1000;
 const PENALTY_COEFFICENT = 1.13;
 const LEVEL_COEFFICENT = 1.3;
-const SUCCESS_TRESHOLD = 65;
+const SUCCESS_TRESHOLD = 60;
 const GAME_STATE = {
     READY: "ready",
     PLAYING: "playing",
@@ -58,7 +58,7 @@ function Engine(context) {
         setTimeout(this.startGame.bind(this), MEMORIZE_TIME);
     };
 
-    this.finishGame = e => {
+    this.finishGame = remainingTime => {
         context.gameBoard.touchEnabled = false;
         var res = setGameResult(context);
         var nextLevel = res >= SUCCESS_TRESHOLD;
@@ -71,10 +71,10 @@ function Engine(context) {
             }
         });
         context.startBtn.touchEnabled = true;
-        score += nextLevel ? getScore(level, res) : 0;
+        score += nextLevel ? getScore(level, res, remainingTime) : 0;
         setTexts(context, score, level, totalTime);
         this.onFinish && this.onFinish(nextLevel);
-        showAlert(nextLevel);
+        showAlert(nextLevel, score > context._leader.score);
 
     };
     this.getScore = e => score;
@@ -83,8 +83,8 @@ function Engine(context) {
 Engine.MEMORIZE_TIME = MEMORIZE_TIME;
 Engine.GAME_STATE = GAME_STATE;
 
-function getScore(level, res) {
-    return Math.floor(level * res * LEVEL_COEFFICENT);
+function getScore(level, res, remainingTime) {
+    return Math.floor((level * res * LEVEL_COEFFICENT) + (remainingTime * level * 10));
 }
 
 function setTexts(context, score, level, totalTime) {
@@ -107,13 +107,13 @@ function playingGame(context, totalTime) {
             image: "continue.png"
         }
     });
-    // var deggreePerSecond = 360 / totalTime;
+    var deggreePerSecond = 360 / totalTime;
     var timer = Timer.setInterval({
         task: e => {
             var isFinished = checkIsGameFinished(context);
             if (isFinished || (secondCount === totalTime)) {
                 Timer.clearTimer(timer);
-                return this.finishGame();
+                return this.finishGame(totalTime - secondCount);
             }
             secondCount += 1;
             context.currentTime.text = (totalTime - secondCount) + " s";
@@ -173,10 +173,10 @@ function setGameResult(context) {
     return rightCount > 0 ? ((rights * 100) / (rightCount)).toFixed(2) : 0;
 }
 
-function showAlert(nextLevel) {
+function showAlert(nextLevel, isLeader) {
     var myAlertView = new AlertView({
         title: nextLevel ? lang["game_continue"] : lang["game_over"],
-        message: getStrContiinueOrDone(nextLevel)
+        message: (isLeader ? lang["new_leader"] : "") + " " + getStrContiinueOrDone(nextLevel)
     });
     myAlertView.addButton({
         text: lang["ok"]

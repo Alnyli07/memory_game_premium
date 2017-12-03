@@ -28,6 +28,7 @@ const PgGameBoard = extend(PgGameBoardDesign)(
     this.onShow = onShow.bind(this, this.onShow.bind(this));
     // overrides super.onLoad method
     this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
+    this._leader = {user: "alnyli", score: 130};
     this._gameState = GAME_STATE.READY;
     this._gameLevel = 1;
     this._gameEngine = new GameEngine(this);
@@ -164,7 +165,7 @@ function onGameFinish(isNextLevel) {
 }
 
 function updateLeaderCorner() {
-
+  
   http.reqGetLeader((err, res) => {
     if (err) return;
     this._leader = JSON.parse(res);

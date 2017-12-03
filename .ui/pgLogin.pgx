@@ -184,7 +184,7 @@
 				"usePageVariable": true,
 				"left": 0,
 				"top": 0,
-				"marginTop": 50,
+				"marginTop": 30,
 				"flexProps": {
 					"flexGrow": 0.8
 				},
@@ -210,11 +210,11 @@
 				"width": null,
 				"height": null,
 				"maxHeight": null,
-				"flexProps": {
-					"flexGrow": 1.1
-				},
 				"left": 0,
-				"top": 0
+				"top": 0,
+				"flexProps": {
+					"flexGrow": 1.5
+				}
 			},
 			"className": ".flexLayout",
 			"props": {
