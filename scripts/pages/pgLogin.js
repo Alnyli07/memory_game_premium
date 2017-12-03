@@ -40,6 +40,7 @@ function onShow(superOnShow) {
  */
 function onLoad(superOnLoad) {
   superOnLoad();
+  this.userNameLbl.text = lang["user_name_label"];
 }
 
 function loginPress() {
@@ -47,7 +48,9 @@ function loginPress() {
   console.log("Text: " + text);
   if (usernameIsValid(text)) {
     chacher.setUserName(text);
-    Router.go("pgGameBoard");
+    Router.go("pgGameBoard", {
+      userName: text
+    });
   }
   else {
     showAlert();

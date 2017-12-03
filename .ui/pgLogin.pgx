@@ -237,6 +237,7 @@
 				"textAlignment": "MIDLEFT",
 				"textColor": "rgba( 160, 160, 160, 1 )",
 				"text": "USERNAME",
+				"usePageVariable": true,
 				"font": {
 					"size": 16,
 					"family": "Nunito",
@@ -248,6 +249,7 @@
 			"props": {
 				"name": "userNameLbl",
 				"text": "USERNAME",
+				"usePageVariable": true,
 				"children": [],
 				"parent": "d9b4-2f68-4245-b324"
 			}

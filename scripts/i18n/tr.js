@@ -48,5 +48,6 @@ SMF.i18n.defineLanguage('tr', {
 	"invalid_user_name_title": "Yanlış Kullanıcı ismi",
 	"invalid_user_name_message": "kullanıcı ismi özel karakterler içermemelidir ve uzunluğu 3 ile 7 arasında olmalıdır.",
 	"newGame": "Yeni oyun için tıkla",
-	"new_leader": "Yeni lider sensin !"
+	"new_leader": "Yeni lider sensin !",
+	"user_name_label": "Kullanıcı ismi"
 });

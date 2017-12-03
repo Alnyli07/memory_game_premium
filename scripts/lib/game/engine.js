@@ -104,7 +104,7 @@ function playingGame(context, totalTime) {
     context.startBtn.dispatch({
         type: "updateUserStyle",
         userStyle: {
-            image: "continue.png"
+            image: "play2.png"
         }
     });
     var deggreePerSecond = 360 / totalTime;

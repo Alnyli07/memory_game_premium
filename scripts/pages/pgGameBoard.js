@@ -43,8 +43,9 @@ const PgGameBoard = extend(PgGameBoardDesign)(
  * @param {function} superOnShow super onShow function
  * @param {Object} parameters passed from Router.go function
  */
-function onShow(superOnShow) {
+function onShow(superOnShow, params) {
   superOnShow();
+  this._userName = params.userName;
 }
 
 function onOrientationChange(superOnOrientationChange, e) {
@@ -179,7 +180,7 @@ function updateNewLeader() {
   var score = this._gameEngine.getScore();
   if (this._leader.score >= score)
     return;
-  http.reqNewLeader("alnyli", score, (err, res) => {
+  http.reqNewLeader(this._userName, score, (err, res) => {
     if (err) return;
   });
 }
