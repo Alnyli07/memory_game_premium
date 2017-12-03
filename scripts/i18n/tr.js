@@ -46,5 +46,6 @@ SMF.i18n.defineLanguage('tr', {
 	"game_over": "Oyun bitti",
 	"game_continue": "Tebrikler !",
 	"invalid_user_name_title": "Yanlış Kullanıcı ismi",
-	"invalid_user_name_message": "kullanıcı ismi özel karakterler içermemelidir ve uzunluğu 3 ile 7 arasında olmalıdır."
+	"invalid_user_name_message": "kullanıcı ismi özel karakterler içermemelidir ve uzunluğu 3 ile 7 arasında olmalıdır.",
+	"newGame": "Yeni oyun için tıkla"
 });

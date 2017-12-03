@@ -31,6 +31,7 @@ function Engine(context) {
         totalTime = 2;
         level = 1;
         score = 0;
+        context.lblInfo.text = lang["newGame"];
         setTexts(context, score, level, totalTime);
     };
 
