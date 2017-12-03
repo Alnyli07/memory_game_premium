@@ -60,6 +60,7 @@ function onLoad(superOnLoad) {
   superOnLoad();
   this._rowCount = 3;
   setContainerSize.call(this);
+  this._gameEngine.initGame();
   this.gameBoard.createBoard(this._boardWidth, this._rowCount);
   updateLeaderCorner.call(this);
   //console.log("Screen:" + Screen.width + " .height " + Screen.height + "System:" + (Screen.height - Screen.width - HEADER_HEIGHT));
@@ -111,6 +112,12 @@ function setContainerSize() {
 
 function startBtnPress(e) {
   this.startBtn.touchEnabled = false;
+  this.startBtn.dispatch({
+    type: "updateUserStyle",
+    userStyle: {
+      alpha: 0.5
+    }
+  });
   switch (this._gameState) {
     case GAME_STATE.READY:
       this._gameEngine.initGame();
@@ -143,7 +150,8 @@ function onGameFinish(isNextLevel) {
   this.startBtn.dispatch({
     type: "updateUserStyle",
     userStyle: {
-      image: "play.png"
+      image: "play.png",
+      alpha: 1
     }
   });
   if (isNextLevel) {

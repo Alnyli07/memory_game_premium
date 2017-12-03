@@ -1,0 +1,68 @@
+{
+	"components": [
+		{
+			"type": "Page",
+			"id": "1a0c-9a49-ce5f-c69d",
+			"initialized": true,
+			"userProps": {},
+			"className": ".page",
+			"version": "6.5.3-rc.16",
+			"props": {
+				"name": "pgFBLogin",
+				"children": [
+					"c4a0-41c6-416d-e032",
+					"acbd-7c08-5053-70fc",
+					"b71e-f321-4e82-199e"
+				],
+				"parent": null,
+				"orientation": "PORTRAIT"
+			}
+		},
+		{
+			"type": "StatusBar",
+			"id": "c4a0-41c6-416d-e032",
+			"userProps": {},
+			"className": ".statusBar",
+			"props": {
+				"name": "statusBar",
+				"children": [],
+				"parent": "1a0c-9a49-ce5f-c69d",
+				"isRemovable": false
+			}
+		},
+		{
+			"type": "HeaderBar",
+			"id": "acbd-7c08-5053-70fc",
+			"userProps": {
+				"title": "Facebook Login"
+			},
+			"className": ".headerBar",
+			"props": {
+				"name": "headerBar",
+				"title": "Facebook Login",
+				"children": [],
+				"parent": "1a0c-9a49-ce5f-c69d",
+				"isRemovable": false
+			}
+		},
+		{
+			"type": "WebView",
+			"id": "b71e-f321-4e82-199e",
+			"userProps": {
+				"usePageVariable": true,
+				"width": null,
+				"height": null,
+				"flexProps": {
+					"flexGrow": 1
+				}
+			},
+			"className": ".webView",
+			"props": {
+				"name": "fbLogin",
+				"usePageVariable": true,
+				"children": [],
+				"parent": "1a0c-9a49-ce5f-c69d"
+			}
+		}
+	]
+}

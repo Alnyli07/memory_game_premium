@@ -1,6 +1,8 @@
 /*global lang */
 const Timer = require("sf-core/timer");
 const AlertView = require('sf-core/ui/alertview');
+//const Animator = require('sf-core/ui/animator');
+
 const MEMORIZE_TIME = 2100;
 const INTERVAL_DELAY = 1000;
 const PENALTY_COEFFICENT = 1.13;
@@ -21,15 +23,14 @@ Array.prototype.diff = function(a) {
 function Engine(context) {
 
     var score = 0;
-    var row = 3;
     var level = 1;
-    var totalTime = 3;
+    var row = 3;
+    var totalTime = 2;
 
     this.initGame = e => {
-        totalTime = 3;
+        totalTime = 2;
         level = 1;
         score = 0;
-        row = 3;
         setTexts(context, score, level, totalTime);
     };
 
@@ -43,7 +44,7 @@ function Engine(context) {
     this.setNextLevel = e => {
         ++level;
         row = context._rowCount;
-        totalTime +=  ((level % 2) === 0 ) ? 1 : 0;
+        totalTime += ((level % 2) === 0) ? 1 : 0;
         setTexts(context, score, level, totalTime);
     };
 
@@ -75,7 +76,7 @@ function Engine(context) {
         showAlert(nextLevel);
 
     };
-    this.getScore = e => score; 
+    this.getScore = e => score;
 }
 
 Engine.MEMORIZE_TIME = MEMORIZE_TIME;
@@ -105,6 +106,7 @@ function playingGame(context, totalTime) {
             image: "continue.png"
         }
     });
+    // var deggreePerSecond = 360 / totalTime;
     var timer = Timer.setInterval({
         task: e => {
             var isFinished = checkIsGameFinished(context);
@@ -114,6 +116,12 @@ function playingGame(context, totalTime) {
             }
             secondCount += 1;
             context.currentTime.text = (totalTime - secondCount) + " s";
+            /*
+            Animator.animate(context.timerIcon, INTERVAL_DELAY, function() {
+                context.timerIcon.rotation = deggreePerSecond;
+                context.timerIcon.left = 0;
+            });
+            */
         },
         delay: INTERVAL_DELAY
     });

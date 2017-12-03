@@ -32,5 +32,6 @@ Application.theme = createThemeContextBound(themeSources);
 
 Router.add("pgLogin", require("./pages/pgLogin"));
 Router.add("pgGameBoard", require("./pages/pgGameBoard"));
+Router.add("pgFBLogin", require("./pages/pgFBLogin"));
 
 Router.go("pgLogin");

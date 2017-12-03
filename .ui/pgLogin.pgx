@@ -153,15 +153,16 @@
 				"text": "Login with Facebook",
 				"height": null,
 				"usePageVariable": true,
+				"left": 0,
+				"top": 0,
+				"visible": false,
 				"flexProps": {
 					"flexGrow": 0.8
 				},
 				"font": {
 					"family": "Nunito",
 					"bold": true
-				},
-				"left": 0,
-				"top": 0
+				}
 			},
 			"className": ".button",
 			"props": {
@@ -181,15 +182,16 @@
 				"height": null,
 				"marginBottom": 5,
 				"usePageVariable": true,
+				"left": 0,
+				"top": 0,
+				"marginTop": 50,
 				"flexProps": {
 					"flexGrow": 0.8
 				},
 				"font": {
 					"family": "Nunito",
 					"bold": true
-				},
-				"left": 0,
-				"top": 0
+				}
 			},
 			"className": ".button",
 			"props": {

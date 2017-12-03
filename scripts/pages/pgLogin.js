@@ -6,6 +6,7 @@ const extend = require('js-base/core/extend');
 const LoginPageFB001Design = require('ui/ui_pgLogin');
 const Router = require("sf-core/ui/router");
 const AlertView = require('sf-core/ui/alertview');
+const chacher = require("lib/chacher");
 
 const LoginPageFB001 = extend(LoginPageFB001Design)(
   // Constructor
@@ -17,7 +18,9 @@ const LoginPageFB001 = extend(LoginPageFB001Design)(
     // overrides super.onLoad method
     this.onLoad = onLoad.bind(this, this.onLoad.bind(this));
     this.loginbutton.onPress = loginPress.bind(this);
-
+    this.fbLoginbutton.onPress = e => Router.go("pgFBLogin")
+    var usernameText = chacher.getUserName();
+    this.userName.text = usernameText || "";
   });
 
 /**
@@ -41,10 +44,12 @@ function onLoad(superOnLoad) {
 
 function loginPress() {
   var text = this.userName.text;
-  console.log("Text: "+ text);
+  console.log("Text: " + text);
   if (usernameIsValid(text)) {
+    chacher.setUserName(text);
     Router.go("pgGameBoard");
-  }else{
+  }
+  else {
     showAlert();
   }
 }
